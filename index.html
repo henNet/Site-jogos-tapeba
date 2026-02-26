@@ -4,204 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogos Tapeba</title>
-
-    <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: #e6dfcf;
-        scroll-behavior: smooth;
-      }
-
-      /* HEADER */
-
-      header {
-        background: linear-gradient(90deg, #ff7a00, #ffb000);
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        flex-wrap: wrap;
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 28px;
-      }
-
-      /* NAV */
-
-      nav {
-        display: flex;
-        gap: 15px;
-      }
-
-      nav a {
-        text-decoration: none;
-        padding: 10px 22px;
-        border-radius: 30px;
-        font-weight: bold;
-        transition: 0.3s;
-        cursor: pointer;
-        background: white;
-        color: #ff4d00;
-      }
-
-      /* BOTÃO ATIVO */
-
-      nav a.active-btn {
-        background: #ff4d00;
-        color: white;
-        transform: scale(1.05);
-      }
-
-      /* RESPONSIVO */
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          text-align: center;
-          gap: 15px;
-        }
-
-        nav {
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-      }
-
-      /* PÁGINAS */
-
-      .page {
-        display: none;
-        animation: fade 0.6s ease-in-out;
-      }
-
-      .active {
-        display: block;
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* HERO */
-
-      .hero {
-        text-align: center;
-        padding: 50px 20px;
-      }
-
-      .hero h2 {
-        color: #ff4d00;
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 18px;
-        color: #444;
-      }
-
-      /* GRID */
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        padding: 40px 80px;
-      }
-
-      .card {
-        border-radius: 20px;
-        padding: 30px;
-        color: white;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        transition: 0.4s;
-        cursor: pointer;
-      }
-
-      .card:hover {
-        transform: translateY(-10px) scale(1.03);
-      }
-
-      .memoria {
-        background: linear-gradient(135deg, #ff2f7a, #ff0055);
-      }
-      .palavras {
-        background: linear-gradient(135deg, #4f7bff, #5b4dff);
-      }
-      .quiz {
-        background: linear-gradient(135deg, #ffa500, #ff8800);
-      }
-      .natureza {
-        background: linear-gradient(135deg, #00b36b, #00a2b3);
-      }
-
-      /* SOBRE */
-
-      .sobre-container {
-        padding: 50px 80px;
-      }
-
-      .box {
-        background: #fff4e6;
-        padding: 30px;
-        border-radius: 20px;
-        border: 4px solid #f0c28b;
-        margin-bottom: 30px;
-        transition: 0.4s;
-      }
-
-      .box:hover {
-        transform: scale(1.02);
-      }
-
-      .card {
-        text-decoration: none;
-        display: block;
-      }
-
-      .card:focus {
-        outline: none;
-      }
-
-      /* FOOTER */
-
-      footer {
-        background: linear-gradient(90deg, #00a36c, #008c7a);
-        color: white;
-        text-align: center;
-        padding: 30px;
-      }
-
-      /* RESPONSIVO */
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-        }
-        .grid,
-        .sobre-container {
-          padding: 30px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header>
-      <h1>🌿 Jogos Tapeba</h1>
+      <h1>Jogos Educativos da EI Índios Tabepa</h1>
       <nav>
         <a onclick="showPage('jogos')" class="active-btn">🎮 Jogos</a>
         <a onclick="showPage('sobre')">ℹ️ Sobre</a>
@@ -212,37 +20,51 @@
     <section id="jogos" class="page active">
       <div class="hero">
         <h2>🎮 Escolha seu Jogo!</h2>
-        <p>Divirta-se aprendendo sobre a cultura dos Índios Tapeba</p>
+        <p>Divirta-se aprendendo sobre a cultura dos Povo Tapeba</p>
       </div>
 
       <div class="grid">
-        <div class="grid">
+        <div class="grid-jogos">
+          <a
+            target="_blank"
+            href="https://view.genially.com/699fa42ca06a382d52b1b11f/interactive-content-grafismos"
+            class="card memoria"
+          >
+            <h3>Memória dos Grafismos</h3>
+            <p>Encontre os pares de grafismos da cultura Tapeba!</p>
+          </a>
+
           <a
             target="_blank"
             href="https://view.genially.com/698ba1002ff2d4979f5ddb69/interactive-content-artesanato"
-            class="card memoria"
+            class="card palavras"
           >
-            <h3>🧠 Memória Tapeba</h3>
-            <p>Encontre os pares de símbolos da cultura Tapeba!</p>
+            <h3>Memória dos Artesanatos</h3>
+            <p>Encontre os pares de artesanato da cultura Tapeba!</p>
           </a>
 
           <a
             target="_blank"
             href="https://view.genially.com/694296cb15e14c02c55763c3/interactive-content-caca-palavras-da-escola-indios-tapeba"
-            class="card palavras"
+            class="card quiz"
           >
-            <h3>📖 Caça Palavras Indígenas</h3>
-            <p>Aprenda palavras da língua Tapeba!</p>
+            <h3>Caça Palavras Cultural</h3>
+            <p>
+              Ache as palasvras sobre arsenato, eventos, animais, locais,
+              instrumentos, alimentos e cultura do povo Tapeba!
+            </p>
           </a>
 
-          <a href="#" class="card quiz">
-            <h3>❓ Quiz Cultural</h3>
-            <p>Teste seus conhecimentos!</p>
-          </a>
-
-          <a href="#" class="card natureza">
-            <h3>🌿 Natureza Tapeba</h3>
-            <p>Descubra plantas e animais importantes!</p>
+          <a
+            target="_blank"
+            href="https://view.genially.com/699f9c7c4dc7c13fa3e2d8cb/interactive-content-quebra-cabeca-cultural-do-povo-tapeba"
+            class="card natureza"
+          >
+            <h3>Quebra Cabeça Cultural</h3>
+            <p>
+              Resolva o quebra cabeça para revelar imagens sobre os Jogos
+              Indígenas do Povo Tabepa
+            </p>
           </a>
         </div>
       </div>
@@ -251,34 +73,49 @@
     <!-- PÁGINA SOBRE -->
     <section id="sobre" class="page">
       <div class="hero">
-        <h2>🌿 Sobre os Índios Tapeba</h2>
-        <p>Conheça a história e cultura deste povo do Ceará</p>
+        <h2>🌿 Sobre o site (Infoproduto)</h2>
+        <!-- <p>Conheça a história e cultura deste povo do Ceará</p> -->
       </div>
 
       <div class="sobre-container">
         <div class="box">
-          <h3>👥 Quem são os Tapeba?</h3>
+          <h3>O que é?</h3>
           <p>
-            Os Tapeba são um povo indígena do Ceará, principalmente da região
-            metropolitana de Fortaleza. Lutaram historicamente pela preservação
-            de sua cultura e território.
+            Este site de jogos representa um infoproduto feito no curso de
+            Literacia Digital do projeto Nós por Nós, oferecido pelo Instituto
+            Federal de Educação, Ciência e Tecnologia do Ceará, em parceria com
+            o Governo do Estado do Ceará, por meio das Secretarias Estaduais de
+            Educação (SEDUC), Ciência, Tecnologia e Educação Superior (SECITECE)
+            e dos Povos Indígenas (SEPINCE).
           </p>
         </div>
 
         <div class="box">
-          <h3>🎨 Cultura e Tradições</h3>
+          <h3>Cursistas (Professores da Escola Indígena Índios Tapeba)</h3>
           <p>
-            Mantêm vivas tradições como o Torém, o artesanato e os conhecimentos
-            sobre a natureza.
+            Claudenildo Bento de Matos Carlos<br />
+            Átila Paulino da Silva Camila do
+            <br />
+            Nascimento Matos Sheila Soares Gomes<br />
+            Francisco José de Oliveira
+            <br />
+            Ambrosio Alves Sheiliana do prado silva
           </p>
+        </div>
+
+        <div class="box">
+          <h3>
+            Professores Orientadores (Instituto Federal de Educação, Ciência e
+            Tecnologia do Ceará - IFCE)
+          </h3>
+          <p>Alexandre Landim <br />José Henrique Brandão Neto</p>
         </div>
       </div>
     </section>
 
     <footer>
-      <h3>🌿 Aprendendo com os Índios Tapeba 🌿</h3>
+      <h3>🌿 Aprendendo com a comunidade Índigena Tapeba 🌿</h3>
       <p>Valorizando a cultura indígena</p>
-      <p>© 2026 Jogos Educativos Tapeba</p>
     </footer>
 
     <script>
