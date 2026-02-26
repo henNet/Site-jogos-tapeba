@@ -147,7 +147,7 @@ nav a.active-btn {
 .card {
   border-radius: 20px;
   padding: 30px;
-  color: white;
+  color: rgb(255, 255, 255);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: 0.4s;
   cursor: pointer;
@@ -158,16 +158,28 @@ nav a.active-btn {
 }
 
 .memoria {
-  background: linear-gradient(135deg, #ff2f7a, #ff0055);
+  /* background: linear-gradient(135deg, #ff2f7a, #ff0055); */
+  background-image: url("imgs/card2.png");
+  background-size: cover;
 }
 .palavras {
-  background: linear-gradient(135deg, #4f7bff, #5b4dff);
+  /* background: linear-gradient(135deg, #4f7bff, #5b4dff); */
+  background-image: url("imgs/card22.png");
+  background-size: cover;
 }
 .quiz {
-  background: linear-gradient(135deg, #ffa500, #ff8800);
+  /* background: linear-gradient(135deg, #ffa500, #ff8800); */
+  background-image: url("imgs/card3.png");
+  background-size: cover;
 }
 .natureza {
-  background: linear-gradient(135deg, #00b36b, #00a2b3);
+  /* background: linear-gradient(135deg, #00b36b, #00a2b3); */
+  background-image: url("imgs/card4.png");
+  background-size: cover;
+}
+
+a h3 {
+  text-shadow: 0 0 5px black;
 }
 
 /* SOBRE */
